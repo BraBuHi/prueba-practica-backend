@@ -1,6 +1,5 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateProductoDto, TypesEnum } from './create-producto.dto';
-import { IsEmpty, IsEnum, IsNumber, IsOptional, IsString, MaxLength, MinLength } from 'class-validator';
+import { TypesEnum } from './create-producto.dto';
+import { IsEnum, IsNumber, IsOptional, IsString, MaxLength, MinLength } from 'class-validator';
 
 export class UpdateProductoDto {
     @IsString()

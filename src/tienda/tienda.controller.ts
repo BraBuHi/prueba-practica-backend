@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
 import { TiendaService } from './tienda.service';
 import { CreateTiendaDto } from './dto/create-tienda.dto';
 import { UpdateTiendaDto } from './dto/update-tienda.dto';
@@ -8,27 +8,27 @@ export class TiendaController {
   constructor(private readonly tiendaService: TiendaService) {}
 
   @Post()
-  create(@Body() createTiendaDto: CreateTiendaDto) {
-    return this.tiendaService.create(createTiendaDto);
+  async create(@Body() createTiendaDto: CreateTiendaDto) {
+    return await this.tiendaService.create(createTiendaDto);
   }
 
   @Get()
-  findAll() {
-    return this.tiendaService.findAll();
+  async findAll() {
+    return await this.tiendaService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.tiendaService.findOne(+id);
+  async findOne(@Param('id') id: number) {
+    return await this.tiendaService.findOne(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateTiendaDto: UpdateTiendaDto) {
-    return this.tiendaService.update(+id, updateTiendaDto);
+  @Put(':id')
+  async update(@Param('id') id: number, @Body() updateTiendaDto: UpdateTiendaDto) {
+    return await this.tiendaService.update(id, updateTiendaDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.tiendaService.remove(+id);
+  async remove(@Param('id') id: number) {
+    return await this.tiendaService.remove(id);
   }
 }
