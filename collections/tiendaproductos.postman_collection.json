@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "a9c20317-3e3b-4491-90c7-39bf75318191",
+		"name": "tiendaproductos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38849734"
+	},
+	"item": [
+		{
+			"name": "Productos Tiendas",
+			"item": [
+				{
+					"name": "Guardar Producto Tienda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/products/8/stores/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Tienda x producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/products/8/stores/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Tiendas x Producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/products/stores/8"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Tienda x Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tiendasId\":[2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/products/stores/7"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Tienda x Producto Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tiendasId\":[2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/products/stores/7"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Guardar Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"productonuevo\",\r\n    \"precio\":1000,\r\n    \"tipo\":\"Perecedero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/products"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Un Producto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"productonuevo\",\r\n    \"precio\":1000,\r\n    \"tipo\":\"Perecedero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/products/7"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"productonuevoActualizar\",\r\n    \"precio\":1000,\r\n    \"tipo\":\"Perecedero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/products/7"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"productonuevoActualizar\",\r\n    \"precio\":1000,\r\n    \"tipo\":\"Perecedero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/products/8"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Todos Producto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"productonuevo\",\r\n    \"precio\":1000,\r\n    \"tipo\":\"Perecedero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/products/7"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tiendas",
+			"item": [
+				{
+					"name": "Guardar Tienda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"tiendalacasa2\",\r\n    \"ciudad\":\"CAL\",\r\n    \"direccion\":\"Centro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Todas Tiendas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"tiendalacasa2\",\r\n    \"ciudad\":\"CAL\",\r\n    \"direccion\":\"Centro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Una Tienda",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"tiendalacasa2\",\r\n    \"ciudad\":\"CAL\",\r\n    \"direccion\":\"Centro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/stores/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Tienda",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"tiendalacasaactualizada2\",\r\n    \"ciudad\":\"CAL\",\r\n    \"direccion\":\"Centro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/stores/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Tienda",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"tiendalacasaactualizada2\",\r\n    \"ciudad\":\"CAL\",\r\n    \"direccion\":\"Centro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/stores/5"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
