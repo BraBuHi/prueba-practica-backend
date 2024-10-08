@@ -6,7 +6,7 @@ export class UpdateTiendaDto {
     @IsNotEmpty()
     @MinLength(3)
     @MaxLength(150)
-    nombretienda: string;
+    nombre: string;
 
     @IsString()
     @Length(3, 3)

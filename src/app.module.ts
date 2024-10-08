@@ -6,6 +6,7 @@ import { ProductoModule } from './producto/producto.module';
 import { Producto } from './producto/entities/producto.entity';
 import { ConfigModule } from '@nestjs/config';
 import { TiendaModule } from './tienda/tienda.module';
+import { tienda } from './tienda/entities/tienda.entity';
 
 @Module({
   imports:
@@ -22,7 +23,7 @@ import { TiendaModule } from './tienda/tienda.module';
       username: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DATABASE,
-      entities: [Producto],
+      entities: [Producto,tienda],
       synchronize: true,
     }),
     ProductoModule,

@@ -6,8 +6,8 @@ export class tienda {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ name: 'nombretienda', length: 150, nullable: false })
-    nombretienda: string;
+    @Column({ name: 'nombre', length: 150, nullable: false })
+    nombre: string;
 
     @Column({ name: 'ciudad', length: 3, nullable: false })
     ciudad: string;
@@ -16,6 +16,7 @@ export class tienda {
     direccion: string;
 
 
-   // @ManyToMany(() => Store, (store) => store.products)
-//    stores: Store[];
+    //@ManyToMany(() => Product, (product) => product.stores)
+   // @JoinTable()
+    //products?: Product[] | null;
 }
