@@ -3,7 +3,7 @@ import { TiendaService } from './tienda.service';
 import { CreateTiendaDto } from './dto/create-tienda.dto';
 import { UpdateTiendaDto } from './dto/update-tienda.dto';
 
-@Controller('tienda')
+@Controller('stores')
 export class TiendaController {
   constructor(private readonly tiendaService: TiendaService) {}
 

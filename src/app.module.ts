@@ -7,7 +7,6 @@ import { Producto } from './producto/entities/producto.entity';
 import { ConfigModule } from '@nestjs/config';
 import { TiendaModule } from './tienda/tienda.module';
 import { tienda } from './tienda/entities/tienda.entity';
-import { TiendaProductoModule } from './tienda-producto/tienda-producto.module';
 
 @Module({
   imports:
@@ -29,7 +28,6 @@ import { TiendaProductoModule } from './tienda-producto/tienda-producto.module';
     }),
     ProductoModule,
     TiendaModule,
-    TiendaProductoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
