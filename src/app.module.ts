@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductoModule } from './producto/producto.module';
 import { Producto } from './producto/entities/producto.entity';
 import { ConfigModule } from '@nestjs/config';
+import { TiendaModule } from './tienda/tienda.module';
 
 @Module({
   imports:
@@ -25,6 +26,7 @@ import { ConfigModule } from '@nestjs/config';
       synchronize: true,
     }),
     ProductoModule,
+    TiendaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
